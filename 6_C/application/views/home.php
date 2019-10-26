@@ -91,7 +91,7 @@
                                     <div class="col-md-12">
                                         <select name="cashier" id="cashier" class="form-control" placeholder="Cashier">
                                             <?php $i = 0 ;foreach ($cashier as $data) { ?>
-                                                <option value=<?php echo $data['name']; 
+                                                <option value=<?php echo $data['id']; 
                                                 if($i=0){
                                                     echo ' selected';
                                                 } ?>><?php echo $data['name']?></option>
@@ -108,7 +108,7 @@
                                     <div class="col-md-12">
                                         <select name="category" id="category" class="form-control" placeholder="Category">
                                             <?php $i = 0 ;foreach ($category as $data) { ?>
-                                                <option value=<?php echo $data['name']; 
+                                                <option value=<?php echo $data['id']; 
                                                 if($i=0){
                                                     echo ' selected';
                                                 } ?>><?php echo $data['name']?></option>

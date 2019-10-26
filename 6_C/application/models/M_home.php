@@ -15,7 +15,7 @@ class m_home extends CI_Model{
   {
 		$id = $this->input->post('id');
 			$id_cashier = $this->input->post('cashier');
-			$name = $this->input->post('product');
+			$name = $this->input->post('name');
 			$id_category = $this->input->post('category');
 			$price = $this->input->post('price');
 			$data = array(

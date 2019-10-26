@@ -36,6 +36,26 @@ $(document).ready(function() {
 
     });
 
+    $(document).on('submit', '#tabel-form.tambah', function(e){
+        e.preventDefault();
+            var id = $(this).attr('data-id');
+            $.ajax({
+            url: page+"/store",
+            type: "POST",
+            data: $('#tabel-form').serialize()+'&action=tambah',
+            success: function(data){          
+                swal.fire("Berhasil", "Data berhasil ditambah", "success")
+                .then((result) => {
+                    if(result.value){
+                        location.href = location.href;
+                    };
+                });
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                swal.fire("Gagal", "Terdapat error yang tidak diketahui atau Koneksi anda terputus dengan server.", "error");            } 
+            });
+    });
+
     //Tombol Edit
     $(document).on('click', '#table-data tbody td button.edit', function () {
         var id = $(this).attr('data-id');
@@ -54,16 +74,33 @@ $(document).ready(function() {
                 $('#tabel-form #category').val(data.data.id_category).trigger('change.select2');
                 $('#tabel-form #price').val(data.data.price);
                 $('#tabel-form #cashier').focus();
-                $('#form_kamar').attr('data-id', id);
+                $('#tabel-form').attr('data-id', id);
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert('Error');
                 $('#tabel-modal').modal({ show: false });
             } 
         });
-        
-          
+    });
 
+    $(document).on('submit', '#tabel-form.edit', function(e){
+        e.preventDefault();
+            var id = $(this).attr('data-id');
+            $.ajax({
+            url: page+"/store",
+            type: "POST",
+            data: $('#tabel-form').serialize()+'&id='+id+'&action=update',
+            success: function(data){          
+                swal.fire("Berhasil", "Data berhasil diupdate", "success")
+                .then((result) => {
+                    if(result.value){
+                        location.href = location.href;
+                    };
+                });
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                swal.fire("Gagal", "Terdapat error yang tidak diketahui atau Koneksi anda terputus dengan server.", "error");            } 
+            });
     });
     
     //Tombol Hapus
