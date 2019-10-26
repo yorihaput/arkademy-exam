@@ -90,27 +90,35 @@
                                 <div class="form-group">
                                     <div class="col-md-12">
                                         <select name="cashier" id="cashier" class="form-control" placeholder="Cashier">
-                                            <option value="1" selected>Pevita Pearce</option>
-                                            <option value="2">Raisa Andriana</option>
+                                            <?php $i = 0 ;foreach ($cashier as $data) { ?>
+                                                <option value=<?php echo $data['name']; 
+                                                if($i=0){
+                                                    echo ' selected';
+                                                } ?>><?php echo $data['name']?></option>
+                                            <?php $i++;} ?>
                                         </select>  
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12">
-                                        <input id="name" name="name" type="text"class="form-control" value="Ice Tea" placeholder="Product Name">
+                                        <input id="name" name="name" type="text"class="form-control" value="" placeholder="Product Name">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12">
                                         <select name="category" id="category" class="form-control" placeholder="Category">
-                                            <option value="1">Food</option>
-                                            <option value="2" selected>Drink</option>
+                                            <?php $i = 0 ;foreach ($category as $data) { ?>
+                                                <option value=<?php echo $data['name']; 
+                                                if($i=0){
+                                                    echo ' selected';
+                                                } ?>><?php echo $data['name']?></option>
+                                            <?php $i++;} ?>
                                         </select>  
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12">
-                                        <input id="price" name="price" type="number"class="form-control" value="10000" placeholder="Product Name">
+                                        <input id="price" name="price" type="number"class="form-control" value="" placeholder="Product Name">
                                     </div>
                                 </div>
                             </div>

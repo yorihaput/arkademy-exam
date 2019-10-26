@@ -11,6 +11,8 @@ class home extends CI_Controller {
 
   public function index()
   {
+    $data['cashier'] = $this->db->get('cashier')->result_array();
+    $data['category'] = $this->db->get('category')->result_array();
     $data['home'] = $this->m_home->selectAll();
         for ($i=0; $i <count($data['home']) ; $i++) { 
             $data['home'][$i]['no'] = $i+1;
@@ -21,7 +23,8 @@ class home extends CI_Controller {
 
   public function detail()
   {
-    $data['home'] = $this->m_home->selectAll();
+    $id = $this->input->post('id');
+    $data['home'] = $this->m_home->select($id);
     $respon['data'] = $data['home'];
     echo json_encode($respon);
   }
