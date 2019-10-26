@@ -130,7 +130,7 @@
           
 
 
-
+    <script type="text/javascript">var page = "<?php echo base_url('home')?>"</script>
     <script type="text/javascript" src="./assets/index.js"></script>
 </body>
 </html>

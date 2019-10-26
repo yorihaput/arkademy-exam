@@ -56,14 +56,14 @@ $(document).ready(function() {
         }).then((result) => {
             if(result.value){
                 $.ajax({
-                    url: location.href+"store",
+                    url: location.href+"/home/store",
                     type: "POST",
                     data: "id="+id+'&action=delete',
                     dataType: "json",
                     success: function(data){          
                         swal.fire({
                             html: "Berhasil Dihapus",
-                            title:"Data Raisa Andriani ID <label class='t-c-primary'>#"+id+"</label>",      
+                            title:"Data "+data.cashier+" ID <label class='t-c-primary'>#"+data.id+"</label>",      
                             type: "success",
                             confirmButtonColor: "#319db5",
                             allowOutsideClick: false

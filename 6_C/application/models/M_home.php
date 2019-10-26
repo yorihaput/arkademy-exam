@@ -30,7 +30,17 @@ class m_home extends CI_Model{
    	}elseif($action=='update'){
    		$this->db->where('id',$id)->update('product', $data);
    	}elseif($action=='delete'){
-		$this->db->where('id',$id)->delete('product');
-	}
+			$query = $this->db->get_where('v_query_product_web', array('id'=>$id))->row_array();
+			if(count($data > 0)){
+				$delete = $this->db->where('id',$id)->delete('product');
+				if($delete){
+					$response['error'] = 'FALSE';
+					$response['id'] = $query['id'];
+					$response['cashier'] = $query['cashier']; 
+				}
+			}
+		}
+
+		return $response;
   }
 }

@@ -21,14 +21,19 @@ class home extends CI_Controller {
 
   public function detail()
   {
-    $data['kamar'] = $this->m_kamar->selectAll();
-    $respon['data'] = $data['kamar'];
+    $data['home'] = $this->m_home->selectAll();
+    $respon['data'] = $data['home'];
     echo json_encode($respon);
   }
   public function store()
   {
     $action=$this->input->post('action');
-    $this->m_kamar->storeData($action);
+    $response = $this->m_home->storeData($action);
+    if(!isset($response)){
+      $response['error'] = 'TRUE';
+    }
+
+    echo json_encode($response);
   }
 }
 ?>
