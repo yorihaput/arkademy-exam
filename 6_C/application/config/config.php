@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://".$_SERVER['SERVER_NAME']."/arkademy-test/" : "http://".$_SERVER['SERVER_NAME']."/arkademy-test/";
+$config['base_url'] = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://".$_SERVER['SERVER_NAME']."/arkademy-test/6_C" : "http://".$_SERVER['SERVER_NAME']."/arkademy-test/6_C";
 
 /*
 |--------------------------------------------------------------------------
