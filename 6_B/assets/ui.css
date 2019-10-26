@@ -1,0 +1,88 @@
+.container{margin-top: 50px;}
+
+.navbar{
+    background: #FFFEFE;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25); 
+}
+
+.btn-shadow{box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);}
+
+.btn-primary{
+    background: #FF8FB2 !important;
+    border : 1px solid #FF8FB2 !important;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #FFEFEF;
+}
+.b-action-tr{padding: 0px 10px;}
+.b-action-tr:focus{box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25) !important;}
+
+.btn-primary:focus{box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25) !important;}
+
+.btn-primary:hover{
+    background: #ca5f83 !important;
+    border : 1px solid #ca5f83 !important;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #FFEFEF;
+}
+
+.btn-primary:active{
+    background: #ffc1e4 !important;
+    border : 1px solid #FF8FB2 !important;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #FFEFEF;
+}
+
+.t-c-primary{color: #FF8FB2 !important;}
+.t-c-green{color: #ACE087 !important;}
+.t-w-bold{font-weight: bold;}
+.t-w-1{font-weight: 500;}
+.t-c-black{color: #000000 !important;}
+.btn-aku{padding: 10px 40px;}
+.logo{height: 65px;}
+.t-a-center{text-align: center}
+.table-ku{border-radius: 15px;box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);}
+.table-ku th:first-of-type{border-top-left-radius: 15px;}
+.table-ku th:last-of-type{border-top-right-radius: 15px;}
+.table-ku th{background: #CECECE;}
+.table-ku th{text-align:center}
+.table-ku th,td{padding: 15px}
+.form-control{
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  background-color: #FFF;
+  border: none;
+  border-radius: 0px;
+  border-bottom : 3px solid #ECEDEE;
+  
+  color: #555555;
+  display: inline-block;
+  height: auto;
+  line-height: normal;
+  padding: 9px 12px 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.select2-container--default .select2-selection--single {
+    border: none;
+  border-radius: 0px;
+  border-bottom : 3px solid #ECEDEE;
+    background-color: #fff !important;
+    padding: 5px 5px !important;
+    height: auto !important;
+ }
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    
+    color: #444;}
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 26px;
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        width: 20px; }
+    .select2-container--default.select2-container--focus .select2-selection--single {
+        outline: 0; }
