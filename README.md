@@ -12,3 +12,8 @@ Atur konfigurasi di file /application/config/database.php
 'database' => 'dbarkademy_exam',
 ```
 
+## SS 6.C
+Screenshoot
+```php
+https://drive.google.com/open?id=1PUAK268cyVJDea4ydnhR7CpGvXDedh8v
+```
