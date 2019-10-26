@@ -55,14 +55,28 @@ $(document).ready(function() {
             allowOutsideClick: false
         }).then((result) => {
             if(result.value){
-                swal.fire({
-                    html: "Berhasil Dihapus",
-                    title:"Data Raisa Andriani ID <label class='t-c-primary'>#1</label>",      
-                    type: "success",
-                    confirmButtonColor: "#319db5",
-                    allowOutsideClick: false
-    
-                    });
+                $.ajax({
+                    url: location.href+"store",
+                    type: "POST",
+                    data: "id="+id+'&action=delete',
+                    dataType: "json",
+                    success: function(data){          
+                        swal.fire({
+                            html: "Berhasil Dihapus",
+                            title:"Data Raisa Andriani ID <label class='t-c-primary'>#"+id+"</label>",      
+                            type: "success",
+                            confirmButtonColor: "#319db5",
+                            allowOutsideClick: false
+                        }).then((result) => {
+                            if(result.value){
+                                location.href = location.href;
+                            };
+                        });
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        swal.fire("Gagal", "Terdapat error yang tidak diketahui atau Koneksi anda terputus dengan server.", "error");
+                    } 
+                });
             }  
         });
     });

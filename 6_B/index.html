@@ -8,7 +8,7 @@
 
     <!-- CSS FILE -->
     <link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./assets/sweetalert2/dist/sweetalert2.all.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/sweetalert2/dist/sweetalert2.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/select2/dist/css/select2.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/ui.css">
 
